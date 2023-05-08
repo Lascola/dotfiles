@@ -18,9 +18,9 @@ end
 
 -- Autocommand that reloads neovim whenever you save the plugins/init.lua file
 vim.cmd([[
-  augroup packer_cj.config
+  augroup packer_lasse.config
     autocmd!
-    autocmd BufWritePost ~/.config/nvim/lua/cj/plugins/init.lua,~/Dropbox/dotfiles/config/nvim/lua/cj/plugins/init.lua source <afile> | PackerSync
+    autocmd BufWritePost ~/.config/nvim/lua/lasse/plugins/init.lua,~/Dropbox/dotfiles/config/nvim/lua/lasse/plugins/init.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -52,7 +52,7 @@ require('packer').startup(function(use)
   use "nvim-lua/plenary.nvim"
 
   -- ctrlfs
-  use { 'dyng/ctrlsf.vim', config = function() require 'cj.plugins.ctrlsf' end }
+  use { 'dyng/ctrlsf.vim', config = function() require 'lasse.plugins.ctrlsf' end }
 
 
   -- telescope
@@ -191,7 +191,7 @@ require('packer').startup(function(use)
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = function ()
-      require'alpha'.setup(require'cj.plugins.dashboard'.config)
+      require'alpha'.setup(require'lasse.plugins.dashboard'.config)
     end
   }
 
@@ -233,7 +233,7 @@ require('lualine').setup {
 -- require'impatient'.enable_profile()
 
 -- go
-require('cj.plugins.go')
+require('lasse.plugins.go')
 
 -- gitsigns
 require('gitsigns').setup()
@@ -251,10 +251,10 @@ lsp.preset('recommended')
 lsp.setup()
 
 -- treesitter
-require('cj.plugins.nvim-treesitter')
+require('lasse.plugins.nvim-treesitter')
 
 -- nvim-tree
-require('cj.plugins.nvim-tree')
+require('lasse.plugins.nvim-tree')
 
 -- hop
 require('hop').setup()

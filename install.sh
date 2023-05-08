@@ -100,6 +100,7 @@ brew install slack
 brew install maestral
 
 # kubectl plugins
+mkdir -p ~/bin
 kubectl krew install relay
 kubectl krew install sniff
 kubectl krew install view-secret
@@ -108,12 +109,12 @@ wget -qO- https://github.com/hidetatz/kubecolor/releases/download/v0.0.20/kubeco
 chmod +x ~/bin/kubectl-login
 
 # Vim
-mkdir -p ~/.config/nvim/lua/cj
+mkdir -p ~/.config/nvim/lua/lasse
 ln -nfs ~/Dropbox/dotfiles/config/nvim/init.lua ~/.config/nvim/init.lua
 ln -nfs ~/Dropbox/dotfiles/config/nvim/static ~/.config/nvim/static
-ln -nfs ~/Dropbox/dotfiles/config/nvim/lua/cj/plugins ~/.config/nvim/lua/cj/plugins
-ln -nfs ~/Dropbox/dotfiles/config/nvim/lua/cj/settings ~/.config/nvim/lua/cj/settings
-ln -nfs ~/Dropbox/dotfiles/config/nvim/lua/cj/keymaps ~/.config/nvim/lua/cj/keymaps
+ln -nfs ~/Dropbox/dotfiles/config/nvim/lua/lasse/plugins ~/.config/nvim/lua/lasse/plugins
+ln -nfs ~/Dropbox/dotfiles/config/nvim/lua/lasse/settings ~/.config/nvim/lua/lasse/settings
+ln -nfs ~/Dropbox/dotfiles/config/nvim/lua/lasse/keymaps ~/.config/nvim/lua/lasse/keymaps
 
 # Fish
 # supress lastlogin message

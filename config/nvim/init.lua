@@ -4,7 +4,7 @@ local load = function(mod)
   end
 
 -- user modules
-load("cj.settings")
-load("cj.keymaps")
-load("cj.plugins")
+load("lasse.settings")
+load("lasse.keymaps")
+load("lasse.plugins")
 
