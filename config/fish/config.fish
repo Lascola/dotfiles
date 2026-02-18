@@ -1,8 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     # kube prompt
-    source  ~/Dropbox/dotfiles/config/fish/functions/kube_show_on_cmd.fish
     set -gx kube_show_kubectl_on k kubectl helm kns kctx kg kga kgp kgpa kgn kgs kgsa kgss kgds kgdsa kgcm kgcma kgd kgda kgi kgia kge kgea
+    # source ~/dropbox/dotfiles/config/fish/functions/kube_show_on_cmd.fish
 end
 
 ### show/hide kubernetes prompt
@@ -10,7 +10,7 @@ end
 # bind -M insert ' ' 'commandline -f expand-abbr; show_on_cmd; commandline -i " "'
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "/Users/chad/.rd/bin"
+set --export --prepend PATH "/Users/lkirk/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 set -x fish_greeting
@@ -54,3 +54,7 @@ starship init fish | source
 
 pyenv init - | source
 pyenv virtualenv-init - | source
+
+if status is-interactive
+    source ~/Dropbox/dotfiles/config/fish/functions/kube_show_on_cmd.fish
+end
