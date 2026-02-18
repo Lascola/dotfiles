@@ -8,7 +8,7 @@ local install_plugins = false
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   print('Installing packer...')
-  local packer_url = '://github.com/wbthomason/packer.nvim'
+  local packer_url = 'https://github.com/wbthomason/packer.nvim'
   vim.fn.system({'git', 'clone', '--depth', '1', packer_url, install_path})
   print('Done.')
 
@@ -246,7 +246,6 @@ require('tidy').setup()
 
 -- lsp/cmp
 local lsp = require('lsp-zero')
-lsp.preset('recommended')
 -- lsp.nvim_workspace()
 lsp.setup()
 
@@ -273,10 +272,11 @@ vim.g.kommentary_create_default_mappings = false
 require("telescope").load_extension('harpoon')
 
 -- indent blankline
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
+require("ibl").setup {
+    scope = {
+        enabled = true,
+        show_start = true,
+    }
 }
 
 -- telescope layout

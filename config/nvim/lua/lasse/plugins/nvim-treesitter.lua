@@ -1,6 +1,6 @@
 -- treesitter configuration
 
-require 'nvim-treesitter.configs'.setup {
+require('nvim-treesitter').setup {
     -- ensure_installed can be "all" or a list of languages { "python", "javascript" }
     ensure_installed = { "python", "bash", "javascript", "cmake", "go", "java", "dockerfile", "fish", "gitignore", "gitattributes", "json", "lua", "php", "typescript", "yaml", "vim" },
 
@@ -45,5 +45,3 @@ vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEn
   end
 })
 ---ENDWORKAROUND
-
-
